@@ -30,12 +30,10 @@ let newArr = [...firstListArr, ...secondtListArr]
 let arrList = [...new Set(newArr)]
 
 
-
 btn.onclick = function () {
 
-
-
     let NewList = document.createElement("ul")
+    thirdDiv.innerText = " List 3"
     thirdDiv.append(NewList)
     for (let i = 0; i < arrList.length; i++) {
         let newLi = document.createElement("li")
@@ -43,11 +41,7 @@ btn.onclick = function () {
         NewList.classList.add("list-group")
         newLi.classList.add("list-group-item")
         newLi.append(arrList[i])
-
-        console.log(newLi.innerText);
-       
     }
-
 }
 
 
