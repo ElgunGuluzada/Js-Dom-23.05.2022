@@ -20,29 +20,27 @@
 
 // Yuxarıdakı misalda c# iki listdədə var amma yeni yaranan listdə sadəcə biri olur.
 
-let btn = document.getElementById("joinList")
-let firstList = document.getElementById("first-list")
-let secondList = document.getElementById("second-list")
-let thirdDiv = document.getElementById("thirdDiv")
-let firstListArr = firstList.innerText.split("\n")
-let secondtListArr = secondList.innerText.split("\n")
-let newArr = [...firstListArr, ...secondtListArr]
-let arrList = [...new Set(newArr)]
+// let btn = document.getElementById("joinList")
+// let firstList = document.getElementById("first-list")
+// let secondList = document.getElementById("second-list")
+// let thirdDiv = document.getElementById("thirdDiv")
+// let firstListArr = firstList.innerText.split("\n")
+// let secondtListArr = secondList.innerText.split("\n")
+// let newArr = [...firstListArr, ...secondtListArr]
+// let arrList = [...new Set(newArr)]
 
-
-btn.onclick = function () {
-
-    let NewList = document.createElement("ul")
-    thirdDiv.innerText = " List 3"
-    thirdDiv.append(NewList)
-    for (let i = 0; i < arrList.length; i++) {
-        let newLi = document.createElement("li")
-        NewList.append(newLi)
-        NewList.classList.add("list-group")
-        newLi.classList.add("list-group-item")
-        newLi.append(arrList[i])
-    }
-}
+// btn.onclick = function () {
+//     let NewList = document.createElement("ul")
+//     thirdDiv.innerText = " List 3"
+//     thirdDiv.append(NewList)
+//     for (let i = 0; i < arrList.length; i++) {
+//         let newLi = document.createElement("li")
+//         NewList.append(newLi)
+//         NewList.classList.add("list-group")
+//         newLi.classList.add("list-group-item")
+//         newLi.append(arrList[i])
+//     }
+// }
 
 
 // Task 2
@@ -50,3 +48,45 @@ btn.onclick = function () {
 // 2) Ashagida elave etdiyim kimi bir dizayn duzeltmek. Reqem qebul eden inputlar olacaq,
 // hansi buttona click etsek hemin operatora gore hesablayib en sondaki inputa cavabi yazdirmaq.
 
+let plusBtn = document.getElementById("plus")
+let minusBtn = document.getElementById("minus")
+let multiplyBtn = document.getElementById("multiply")
+let divideBtn = document.getElementById("divide")
+
+let firstInput = document.getElementById("first-input")
+
+let secondInput = document.getElementById("second-input")
+
+let resultInput = document.getElementById("result-input")
+
+plusBtn.onclick = function () {
+    let firstInputValue = firstInput.value.trim();
+    let secondInputValue = secondInput.value.trim();
+
+    let result = parseInt(firstInputValue) + parseInt(secondInputValue);
+    resultInput.value = result
+}
+
+minusBtn.onclick = function () {
+    let firstInputValue = firstInput.value.trim();
+    let secondInputValue = secondInput.value.trim();
+
+    let result = parseInt(firstInputValue) - parseInt(secondInputValue);
+    resultInput.value = result
+}
+
+multiplyBtn.onclick = function () {
+    let firstInputValue = firstInput.value.trim();
+    let secondInputValue = secondInput.value.trim();
+
+    let result = parseInt(firstInputValue) * parseInt(secondInputValue);
+    resultInput.value = result
+}
+
+divideBtn.onclick = function () {
+    let firstInputValue = firstInput.value.trim();
+    let secondInputValue = secondInput.value.trim();
+
+    let result = parseInt(firstInputValue) / parseInt(secondInputValue);
+    resultInput.value = result
+}
