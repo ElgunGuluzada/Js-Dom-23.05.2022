@@ -54,39 +54,37 @@ let multiplyBtn = document.getElementById("multiply")
 let divideBtn = document.getElementById("divide")
 
 let firstInput = document.getElementById("first-input")
-
 let secondInput = document.getElementById("second-input")
-
 let resultInput = document.getElementById("result-input")
 
 plusBtn.onclick = function () {
-    let firstInputValue = firstInput.value.trim();
-    let secondInputValue = secondInput.value.trim();
+    let firstInputValue = firstInput.value;
+    let secondInputValue = secondInput.value;
 
     let result = parseInt(firstInputValue) + parseInt(secondInputValue);
     resultInput.value = result
 }
 
 minusBtn.onclick = function () {
-    let firstInputValue = firstInput.value.trim();
-    let secondInputValue = secondInput.value.trim();
+    let firstInputValue = firstInput.value;
+    let secondInputValue = secondInput.value;
 
-    let result = parseInt(firstInputValue) - parseInt(secondInputValue);
+    let result = firstInputValue - secondInputValue;
     resultInput.value = result
 }
 
 multiplyBtn.onclick = function () {
-    let firstInputValue = firstInput.value.trim();
-    let secondInputValue = secondInput.value.trim();
+    let firstInputValue = firstInput.value;
+    let secondInputValue = secondInput.value;
 
-    let result = parseInt(firstInputValue) * parseInt(secondInputValue);
+    let result = firstInputValue * secondInputValue;
     resultInput.value = result
 }
 
 divideBtn.onclick = function () {
-    let firstInputValue = firstInput.value.trim();
-    let secondInputValue = secondInput.value.trim();
+    let firstInputValue = firstInput.value;
+    let secondInputValue = secondInput.value;
 
-    let result = parseInt(firstInputValue) / parseInt(secondInputValue);
+    let result = firstInputValue / secondInputValue;
     resultInput.value = result
 }
